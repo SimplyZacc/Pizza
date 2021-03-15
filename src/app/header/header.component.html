@@ -1,25 +1,47 @@
-<nav class="navbar nav-background fixed-top" id="nav-t" style="width: 100%;">
-    <div class="nav-left">
-        <a class="nav-home td-none arial-font" routerLink="">HOME</a>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <a class="nav-text td-none arial-font" routerLink="menu">MENU</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="td-none nav-home" href="#">HOME<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown mt-2">
+                <a class="nav-text dropdown-toggle td-none" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    MENU
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item nav-text" href="#">Menu Page</a>
+                    <a class="dropdown-item nav-text" href="#">Pizza</a>
+                    <a class="dropdown-item nav-text" href="#">Pasta</a>
+                    <a class="dropdown-item nav-text" href="#">Salad</a>
+                    <a class="dropdown-item nav-text" href="#">Desert</a>
+                    <a class="dropdown-item nav-text" href="#">Drinks</a>
+                </div>
+            </li>
+            <li class="nav-item mt-2">
+                <a class="nav-text td-none arial-font " routerLink="about">ABOUT US</a>
+            </li>
+            <li class="nav-item mt-2">
+                <a class="nav-text td-none arial-font" routerLink="contact">CONTACT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">ORDER</a>
+            </li>
+        </ul>
 
-        <a class="nav-text td-none arial-font" routerLink="about">ABOUT US</a>
+        <div class="nav-right">
+            <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram fa-nav-icon"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fa fa-twitter fa-nav-icon"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fa fa-facebook fa-nav-icon"></i></a>
 
-        <a class="nav-text td-none arial-font" routerLink="contact">CONTACT</a>
-
-        <a class="nav-text td-none arial-font">ORDER</a>
-        <!-- routerLink="order" -->
-    </div>
-
-    <div class="nav-right">
-        <a href="https://www.instagram.com"><i class="fa fa-instagram fa-nav-icon" ></i></a>
-        <a href="https://www.instagram.com"><i class="fa fa-twitter fa-nav-icon" ></i></a>
-        <a href="https://www.instagram.com"><i class="fa fa-facebook fa-nav-icon"></i></a>
-
-        <a class="nav-text navbar-callnow td-none arial-font" routerLink="tel:1-555-555-1212"><button class="call-button">
-        +1 234 567-8910
-      </button>
-      </a>
+            <a class="nav-text navbar-callnow td-none arial-font" routerLink="tel:1-555-555-1212"><button
+                    class="call-button">
+                    +1 234 567-8910
+                </button>
+            </a>
+        </div>
     </div>
 </nav>
