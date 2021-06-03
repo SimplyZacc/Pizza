@@ -1,16 +1,39 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Food } from '../models/food';
+import { Foods } from '../test/food-items';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class FoodService {
 
-  constructor( private apiService: ApiService) { }
+  foods: Food[];
+  selectedFood: Food;
 
+  constructor() {
+    this.foods = Foods;
+  }
+
+  getFoods(): Observable<Food[]> {
+    const foodTypes = of(this.foods);
+    return foodTypes;
+  }
+
+  getFoodsByType(id: number): Observable<Food[]> {
+    const foods = this.foods.filter(i => i.FoodTypeId === id) as Food[];
+    return of(foods);
+  }
+
+  getFood(id: number): Observable<Food> {
+    const foodType = this.foods.find(i => i.FoodId === id) as Food;
+    return of(foodType);
+  }
+
+  /*
   getAllFoods(): Observable<Food[]> {
     return this.apiService.get('Food')
       .pipe(map(data => data.data));
@@ -33,4 +56,5 @@ export class FoodService {
     return this.apiService.get('FoodType')
       .pipe(map(data => data.data));
   }
+  */
 }
